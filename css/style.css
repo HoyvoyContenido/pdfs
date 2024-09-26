@@ -26,10 +26,16 @@ header {
   display: flex;
   justify-content: center;
   align-items: center;
+  height: 150px;
+  position: relative;
+  flex-direction: column;
 }
 
 .logo{
-  margin-right: auto;
+  position: absolute;
+  left: 20px;
+  top: 50%;
+  transform: translateY(-50%);
 }
 
 header img {
@@ -39,12 +45,18 @@ header img {
 h1 {
   color: #000;
   margin: 0;
-  font-size: 2.5em;
+  font-size: 1.5em;
   display: inline-block;
   background-color: #fff;
   padding: 5px;
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+h3 {
+  color: #000;
+  font-size: 1em;
+  margin-top: 10px;         /* Espacio entre el h1 y h3 */
 }
 
 .container {
@@ -62,7 +74,6 @@ h1 {
   justify-content: center;
   gap: 30px;
 }
-
 .vehicle-link {
   width: 450px;
   height: 350px;
@@ -78,18 +89,24 @@ h1 {
   text-align: center;
 }
 
+
 .vehicle-link img {
   max-width: 350px;
   display: block;
   margin: 0 auto 10px;
+  transition: opacity 0.2s ease;
 }
 
+.vehicle-link:hover img {
+  opacity: 0.5;
+}
 footer {
-  background-color: #f8e600;
+  background-color: #000000;
   padding: 20px;
   text-align: center;
-  color: #000;
+  color: white;
   width: 100%;
+  margin-top: auto;
 }
 
 footer p {
