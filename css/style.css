@@ -51,7 +51,7 @@ h3 {
 }
 
 .logo img {
-  max-width: 150px; /* Tamaño máximo en pantallas grandes */
+  max-width: 80px; /* Tamaño máximo en pantallas grandes */
   height: auto; /* Asegura que mantenga la proporción */
 }
 
