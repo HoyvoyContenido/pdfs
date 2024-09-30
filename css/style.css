@@ -1,7 +1,6 @@
 /* Ajustes generales para el diseño */
 body, html {
   height: 100%;
-  font-family: Arial, sans-serif;
   background-color: #f0f0f0;
   margin: 0;
   display: flex;
@@ -47,8 +46,6 @@ h3 {
   font-size: 1.25em;
   background-color: #fff; /* Fondo blanco */
   padding: 10px 20px;
-  border-radius: 10px; /* Bordes redondeados */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra ligera */
   display: inline-block; /* Para que el h2 se ajuste a su contenido */
   margin-top: 10px; /* Separación entre h1 y h2 */
 }
