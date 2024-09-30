@@ -1,186 +1,130 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-html, body {
+/* Ajustes generales para el diseño */
+body, html {
   height: 100%;
   font-family: Arial, sans-serif;
-  margin: 0;
-  padding: 0;
   background-color: #f0f0f0;
-  display: flex;
-  flex-direction: column;
 }
 
-body {
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
+@font-face {
+  font-family: 'DIN Round Pro';
+  src: url('fonts/DIN Round Pro/DINRoundPro-Bold.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
 }
 
+@font-face {
+  font-family: 'DIN Round Pro';
+  src: url('fonts/DIN Round Pro/DINRoundPro-Bold.otf') format('opentype');
+  font-weight: bold;
+  font-style: normal;
+}
+
+/* Aplicamos la fuente DIN Round Pro a todo el documento */
+body, html {
+  font-family: 'DIN Round Pro', Arial, sans-serif;
+}
+
+
+/* Estilo para el header */
 header {
-  background-color: #f8e600;
+  background-color: #f8e600 !important;
   padding: 20px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 150px;
+  text-align: center;
   position: relative;
-  flex-direction: column;
 }
 
-.logo {
-  position: absolute;
-  left: 20px;
-  top: 50%;
-  transform: translateY(-50%);
-}
-
-header img {
-  max-width: 100px;
-}
-
-h1 {
-  color: #000;
-  margin: 0;
-  font-size: 1.5em;
-  display: inline-block;
+header h1 {
   background-color: #fff;
-  padding: 5px;
+  padding: 10px;
   border-radius: 10px;
+  display: inline-block;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-h3 {
-  color: #000;
+header h3 {
+  margin-top: 10px;
   font-size: 1em;
-  margin-top: 10px; /* Espacio entre el h1 y h3 */
 }
 
-.container {
-  background-color: #fff;
-  padding: 50px 20px;
-  text-align: center;
-  flex: 1;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+.logo img {
+  max-width: 100px;
 }
 
-.vehicles {
-  display: flex;
-  justify-content: center;
-  gap: 30px;
-  flex-wrap: wrap; /* Para que los elementos puedan ajustarse en pantallas pequeñas */
-}
-
+/* Estilo para los enlaces de los vehículos */
 .vehicle-link {
-  width: 450px;
-  height: 350px;
-  padding: 20px;
-  background-color: #fff;
-  border: 2px solid #f8e600; /* Borde amarillo */
-  border-radius: 10px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   text-decoration: none;
   color: #000;
-  font-size: 28px;
-  font-weight: bold;
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
+  transition: transform 0.3s ease;
+}
+
+.vehicle-link:hover {
+  transform: scale(1.05); /* Efecto de aumento en hover */
 }
 
 .vehicle-link img {
-  max-width: 100%; /* Ajusta la imagen al ancho del contenedor */
+  max-width: 100%;
   max-height: 200px;
   object-fit: contain;
-  margin: 0 auto;
-  display: block;
   transition: opacity 0.3s ease;
 }
 
 .vehicle-link:hover img {
-  opacity: 0.5;
+  opacity: 0.7; /* Translucidez al pasar el cursor */
 }
 
+/* Estilo para los textos (Mini, Jeep Automático, etc.) */
 .vehicle-link p {
-  margin-top: auto;
   position: relative;
+  font-weight: bold;
+  font-size: 1.2em;
+  margin-top: auto;
 }
 
 .vehicle-link p::after {
   content: '';
   position: absolute;
   left: 0;
-  bottom: -1px;
+  bottom: -5px;
   width: 100%;
-  height: 5px; /* Grosor del subrayado */
-  background-color: #f8e600; /* Color del subrayado */
+  height: 5px;
+  background-color: #f8e600;
 }
 
-footer {
-  background-color: #000000;
-  padding: 20px;
-  text-align: center;
-  color: white;
-  width: 100%;
-  margin-top: auto;
-}
-
-footer p {
-  margin: 0;
-}
-
-/* Media queries para móviles */
+/* Ajustes responsivos */
 @media (max-width: 768px) {
-  .vehicles {
-    flex-direction: column; /* Apila los elementos en pantallas pequeñas */
-    gap: 20px;
-  }
-
   .vehicle-link {
-    width: 100%;
-    max-width: 350px; /* Limitar el tamaño máximo en móviles */
-    height: auto; /* Ajustar la altura al contenido */
-    margin: 0 auto; /* Centrar el contenedor */
+    max-width: 350px;
+    height: auto;
+    margin: 0 auto;
   }
 
   .vehicle-link img {
-    max-height: 150px; /* Ajustar el tamaño de las imágenes en móviles */
+    max-height: 150px;
   }
 
-  header {
-    text-align: center; /* Centrar el contenido en móviles */
+  header h1 {
+    font-size: 1.2em;
   }
 
-  h1 {
-    font-size: 1.2em; /* Reducir el tamaño del texto en móviles */
-  }
-
-  h3 {
-    font-size: 0.9em; /* Reducir el tamaño del subtítulo en móviles */
+  header h3 {
+    font-size: 0.9em;
   }
 }
 
 @media (max-width: 480px) {
   .vehicle-link {
-    max-width: 100%; /* Ocupar todo el ancho en pantallas muy pequeñas */
+    max-width: 100%;
   }
 
   .vehicle-link img {
-    max-height: 120px; /* Imágenes más pequeñas en móviles pequeños */
+    max-height: 120px;
   }
 
-  h1 {
-    font-size: 1em; /* Reducir más el título en pantallas pequeñas */
+  header h1 {
+    font-size: 1em;
   }
 
-  h3 {
-    font-size: 0.8em; /* Subtítulo más pequeño en pantallas pequeñas */
+  header h3 {
+    font-size: 0.8em;
   }
 }
