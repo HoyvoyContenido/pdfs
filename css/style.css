@@ -33,22 +33,40 @@ header {
   position: relative;
 }
 
-header h1 {
-  background-color: #fff;
-  padding: 10px;
-  border-radius: 10px;
-  display: inline-block;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+h1 {
+  color: #000; /* Ajusta el color del texto */
+  font-size: 3em; /* Ajusta el tamaño de la fuente */
+  margin: 0;
 }
 
-header h3 {
-  margin-top: 10px;
-  font-size: 1em;
+h3 {
+  color: #000; /* Color del texto dentro del recuadro */
+  font-size: 1.25em;
+  background-color: #fff; /* Fondo blanco */
+  padding: 10px 20px;
+  border-radius: 10px; /* Bordes redondeados */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra ligera */
+  display: inline-block; /* Para que el h2 se ajuste a su contenido */
+  margin-top: 10px; /* Separación entre h1 y h2 */
 }
 
 .logo img {
-  max-width: 100px;
+  max-width: 150px; /* Tamaño máximo en pantallas grandes */
+  height: auto; /* Asegura que mantenga la proporción */
 }
+
+@media (max-width: 768px) {
+  .logo img {
+    max-width: 120px; /* Tamaño más pequeño en tabletas */
+  }
+}
+
+@media (max-width: 480px) {
+  .logo img {
+    max-width: 100px; /* Tamaño más pequeño en móviles */
+  }
+}
+
 
 /* Estilo para los enlaces de los vehículos */
 .vehicle-link {
