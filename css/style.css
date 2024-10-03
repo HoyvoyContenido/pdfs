@@ -83,10 +83,12 @@ h3 {
   max-height: 300px;
   object-fit: contain;
   transition: opacity 0.3s ease;
+  /*transition: transform 0.9s;*/
 }
 
 .vehicle-link:hover img {
   opacity: 0.7; /* Translucidez al pasar el cursor */
+  /*transform: translateX(2800px);*/
 }
 
 /* Estilo para los textos (Mini, Jeep Automático, etc.) */
